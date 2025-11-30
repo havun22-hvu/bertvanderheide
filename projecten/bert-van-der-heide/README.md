@@ -170,9 +170,7 @@ CNAME:
 www → bertvanderheide.nl
 
 MX-records (Google Workspace):
-@ → 1  → smtp.google.com
-@ → 5  → alt1.gmr-smtp-in.l.google.com
-@ → 10 → alt2.gmr-smtp-in.l.google.com
+→ Configureer via Google Workspace admin
 
 TXT (SPF):
 @ → v=spf1 include:_spf.google.com ~all

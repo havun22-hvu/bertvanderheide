@@ -189,7 +189,7 @@ A-record (Website):
 @ → 188.245.159.115 (Henk's server)
 
 MX-records (Email):
-@ → smtp.google.com (Google's servers)
+@ → Google Workspace servers
 
 ZELFDE domein, VERSCHILLENDE servers!
 DNS maakt dit mogelijk! 🎯
@@ -580,7 +580,7 @@ MX Records:
 
 Bepalen waar email naartoe gaat
 Los van website hosting!
-Google Workspace = wijst naar smtp.google.com
+Google Workspace = wijst naar Google servers
 Website @ Henk, Email @ Google = normaal!
 
 VirtualHost (Apache):
@@ -682,9 +682,7 @@ CNAME (www):
 www → bertvanderheide.nl
 
 MX-records (Email - APART!):
-@ → 1  → smtp.google.com
-@ → 5  → alt1.gmr-smtp-in.l.google.com
-@ → 10 → alt2.gmr-smtp-in.l.google.com
+→ Configureer via Google Workspace admin
 
 TXT (SPF):
 @ → v=spf1 include:_spf.google.com ~all
@@ -699,7 +697,7 @@ google._domainkey → v=DKIM1; k=rsa; p=xxxxx
 **Belangrijke Scheiding:**
 ```
 Website: A-record → 188.245.159.115 (jouw server)
-Email:   MX-record → smtp.google.com (Google servers)
+Email:   MX-record → Google Workspace servers
 
 = ZELFDE domein, VERSCHILLENDE servers!
 = DNS maakt dit mogelijk
@@ -806,10 +804,7 @@ CORRECT: Klant neemt direct Google Workspace
 
 3. MX Records (DNS)
    └─ Oude MX records VERWIJDEREN
-   └─ Nieuwe MX records toevoegen:
-      @ → 1  → smtp.google.com
-      @ → 5  → alt1.gmr-smtp-in.l.google.com
-      etc.
+   └─ Nieuwe MX records toevoegen via Google Workspace admin
 
 4. SPF/DKIM/DMARC
    └─ TXT: v=spf1 include:_spf.google.com ~all
@@ -1711,16 +1706,16 @@ DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=bert_db              ← Bert's database
 DB_USERNAME=bert_user            ← Bert's user
-DB_PASSWORD=SterkWachtwoord123!  ← Bert's wachtwoord
+DB_PASSWORD=***                  ← Bert's wachtwoord
 
 # Mail settings (als contact formulier)
-MAIL_MAILER=smtp
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USERNAME=info@bertvanderheide.nl
-MAIL_PASSWORD=app-specific-password
-MAIL_FROM_ADDRESS=info@bertvanderheide.nl
-MAIL_FROM_NAME="Bert van der Heide"
+MAIL_MAILER=... (configureer later)
+MAIL_HOST=...
+MAIL_PORT=...
+MAIL_USERNAME=...
+MAIL_PASSWORD=...
+MAIL_FROM_ADDRESS=...
+MAIL_FROM_NAME=...
 
 # Google Analytics (Bert's tracking)
 GOOGLE_ANALYTICS_ID=UA-12345-1
