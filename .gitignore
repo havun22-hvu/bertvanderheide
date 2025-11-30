@@ -1,0 +1,66 @@
+# Git Ignore voor Webhosting Business
+
+# Gevoelige informatie
+*.env
+.env.*
+credentials.json
+secrets.json
+passwords.txt
+ssh_keys/
+*.pem
+*.key
+*.ppk
+
+# Client specifieke gevoelige data
+*/credentials/
+*/toegang/
+*-wachtwoorden.md
+*-toegang.md
+
+# Backup bestanden
+*.sql
+*.sql.gz
+*.zip
+*.tar.gz
+backups/
+duplicator-backups/
+
+# Logs
+*.log
+logs/
+error_log
+access_log
+
+# OS specifiek
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor specifiek
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (als je later automation toevoegt)
+node_modules/
+package-lock.json
+
+# Python (als je scripts gebruikt)
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+
+# Tijdelijke bestanden
+tmp/
+temp/
+*.tmp
+*.cache
+
+# Specifiek voor dit project
+# Uncomment indien nodig:
+# projecten/*/toegang.md
+# projecten/*/credentials.txt
