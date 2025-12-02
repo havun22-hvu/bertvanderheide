@@ -5,8 +5,6 @@
       "Read",
       "Edit",
       "Write",
-      "WebFetch(domain:trustoo.nl)",
-      "WebFetch(domain:www.uitvaartverzorging-info.nl)",
       "WebFetch(domain:www.google.com)"
     ],
     "deny": [
